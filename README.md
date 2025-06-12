@@ -1,3 +1,7 @@
+
+Randomized URL:
+https://gilded-lily-bd3d54.netlify.app/
+
 "Juega Julián" is an educational web game designed for preschoolers (ages 4-5) to learn basic math and reading skills through fun and interactive gameplay.
 
 Features
