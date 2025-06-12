@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juega Julián - Mario Math Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!--Third-party API from https://cdnjs.com/libraries/mathjs/11.7.0-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.min.js"></script>
+
+    <!--Third-party API from https://cdnjs.com/libraries/tone-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/15.1.5/Tone.min.js"></script>
+   
+  <script type="module" crossorigin src="/assets/math-B9ii51JD.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/utils-Cb6_lU3v.js">
+  <link rel="stylesheet" crossorigin href="/assets/math-CE0opDpZ.css">
+</head>
+
+<body>
+    <header class="divider" id="main-header"></header>
+    <main class="main-math-game">
+        <div class="game-container">
+            <h1>Mario Math Adventure</h1>
+            <div id="feedback" class="feedback-box default"></div>
+            <canvas id="gameCanvas"></canvas>
+            <div class="game-instructions">
+                <p>Use the <strong>← → arrows</strong> to move, press <strong>Enter</strong> to submit your answer</p>
+            </div>
+        </div>       
+    </main>
+
+    <footer id="main-footer"></footer>
+</body>
+
+</html>
