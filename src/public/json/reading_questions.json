@@ -1,6 +1,6 @@
 [
   {
-    "id": "voc-a-001",
+    "id": "001",
     "level": 0,
     "category": "vowels",
     "type": "vowel_recognition",
@@ -15,7 +15,7 @@
     "language": "es"
   },
   {
-    "id": "voc-e-002",
+    "id": "002",
     "level": 0,
     "category": "vowels",
     "type": "vowel_recognition",
@@ -30,7 +30,7 @@
     "language": "es"
   },
   {
-    "id": "voc-i-003",
+    "id": "003",
     "level": 0,
     "category": "vowels",
     "type": "vowel_recognition",
@@ -45,7 +45,7 @@
     "language": "es"
   },
   {
-    "id": "voc-o-004",
+    "id": "004",
     "level": 0,
     "category": "vowels",
     "type": "vowel_recognition",
@@ -60,7 +60,7 @@
     "language": "es"
   },
   {
-    "id": "voc-u-005",
+    "id": "005",
     "level": 0,
     "category": "vowels",
     "type": "vowel_recognition",
@@ -75,7 +75,7 @@
     "language": "es"
   },
   {
-    "id": "syll-ma-006",
+    "id": "006",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -90,7 +90,7 @@
     "language": "es"
   },
   {
-    "id": "syll-me-007",
+    "id": "007",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -105,7 +105,7 @@
     "language": "es"
   },
   {
-    "id": "syll-mi-008",
+    "id": "008",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -120,7 +120,7 @@
     "language": "es"
   },
   {
-    "id": "syll-mo-009",
+    "id": "009",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -135,7 +135,7 @@
     "language": "es"
   },
   {
-    "id": "syll-mu-010",
+    "id": "010",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -150,7 +150,7 @@
     "language": "es"
   },
   {
-    "id": "word-mama-011",
+    "id": "011",
     "level": 2,
     "category": "family",
     "type": "word_formation",
@@ -165,7 +165,7 @@
     "language": "es"
   },
   {
-    "id": "word-mesa-012",
+    "id": "012",
     "level": 2,
     "category": "objects",
     "type": "word_recognition",
@@ -180,7 +180,7 @@
     "language": "es"
   },
   {
-    "id": "syll-pa-013",
+    "id": "013",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -195,7 +195,7 @@
     "language": "es"
   },
   {
-    "id": "syll-pe-014",
+    "id": "014",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -210,7 +210,7 @@
     "language": "es"
   },
   {
-    "id": "syll-pi-015",
+    "id": "015",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -225,7 +225,7 @@
     "language": "es"
   },
   {
-    "id": "syll-po-016",
+    "id": "016",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -240,7 +240,7 @@
     "language": "es"
   },
   {
-    "id": "syll-pu-017",
+    "id": "017",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -255,7 +255,7 @@
     "language": "es"
   },
   {
-    "id": "word-papá-018",
+    "id": "018",
     "level": 2,
     "category": "family",
     "type": "word_formation",
@@ -270,7 +270,7 @@
     "language": "es"
   },
   {
-    "id": "syll-sa-019",
+    "id": "019",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -285,7 +285,7 @@
     "language": "es"
   },
   {
-    "id": "syll-se-020",
+    "id": "020",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -300,7 +300,7 @@
     "language": "es"
   },
   {
-    "id": "syll-si-021",
+    "id": "021",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -315,7 +315,7 @@
     "language": "es"
   },
   {
-    "id": "syll-so-022",
+    "id": "022",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -330,7 +330,7 @@
     "language": "es"
   },
   {
-    "id": "syll-su-023",
+    "id": "023",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -345,7 +345,7 @@
     "language": "es"
   },
   {
-    "id": "word-sapo-024",
+    "id": "024",
     "level": 2,
     "category": "animals",
     "type": "word_recognition",
@@ -360,7 +360,7 @@
     "language": "es"
   },
   {
-    "id": "word-sopa-025",
+    "id": "025",
     "level": 2,
     "category": "objects",
     "type": "word_recognition",
@@ -375,7 +375,7 @@
     "language": "es"
   },
   {
-    "id": "syll-ta-026",
+    "id": "026",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -390,7 +390,7 @@
     "language": "es"
   },
   {
-    "id": "syll-te-027",
+    "id": "027",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -405,7 +405,7 @@
     "language": "es"
   },
   {
-    "id": "syll-ti-028",
+    "id": "028",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -420,7 +420,7 @@
     "language": "es"
   },
   {
-    "id": "syll-to-029",
+    "id": "029",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -435,7 +435,7 @@
     "language": "es"
   },
   {
-    "id": "syll-tu-030",
+    "id": "030",
     "level": 1,
     "category": "syllables",
     "type": "syllable_formation",
@@ -450,7 +450,7 @@
     "language": "es"
   },
   {
-    "id": "word-taza-031",
+    "id": "031",
     "level": 2,
     "category": "objects",
     "type": "word_recognition",
@@ -461,6 +461,201 @@
     "options": ["vaso", "taza", "plato", "cuchara"],
     "feedback_correct_text": "¡Perfecto! Es una 'taza'.",
     "feedback_incorrect_text": "Es una 'taza'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "032",
+    "level": 2,
+    "category": "animals",
+    "type": "word_recognition",
+    "image_asset": "/images/word_pato.webp",
+    "correct_answer": "pato",
+    "audio_hint": "pato",
+    "question_text": "¿Qué animal es este?",
+    "options": ["gato", "pato", "perro", "sapo"],
+    "feedback_correct_text": "¡Excelente! Es un 'pato'.",
+    "feedback_incorrect_text": "Ese es un 'pato'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "033",
+    "level": 2,
+    "category": "body_parts",
+    "type": "word_recognition",
+    "image_asset": "/images/word_pata.webp",
+    "correct_answer": "pata",
+    "audio_hint": "pata",
+    "question_text": "¿Qué parte del cuerpo es esta?",
+    "options": ["mano", "pie", "pata", "cola"],
+    "feedback_correct_text": "¡Correcto! Es una 'pata'.",
+    "feedback_incorrect_text": "Esa es una 'pata'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "034",
+    "level": 2,
+    "category": "geography",
+    "type": "word_recognition",
+    "image_asset": "/images/word_mapa.webp",
+    "correct_answer": "mapa",
+    "audio_hint": "mapa",
+    "question_text": "¿Qué es esto?",
+    "options": ["libro", "mapa", "cuaderno", "globo"],
+    "feedback_correct_text": "¡Muy bien! Es un 'mapa'.",
+    "feedback_incorrect_text": "Eso es un 'mapa'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "035",
+    "level": 2,
+    "category": "animals",
+    "type": "word_recognition",
+    "image_asset": "/images/word_puma.webp",
+    "correct_answer": "puma",
+    "audio_hint": "puma",
+    "question_text": "¿Qué animal es este?",
+    "options": ["león", "tigre", "puma", "gato"],
+    "feedback_correct_text": "¡Correcto! Es un 'puma'.",
+    "feedback_incorrect_text": "Ese es un 'puma'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "036",
+    "level": 2,
+    "category": "vehicles",
+    "type": "word_recognition",
+    "image_asset": "/images/word_moto.webp",
+    "correct_answer": "moto",
+    "audio_hint": "moto",
+    "question_text": "¿Qué vehículo es este?",
+    "options": ["coche", "bicicleta", "moto", "camión"],
+    "feedback_correct_text": "¡Genial! Es una 'moto'.",
+    "feedback_incorrect_text": "Eso es una 'moto'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "037",
+    "level": 2,
+    "category": "objects",
+    "type": "word_recognition",
+    "image_asset": "/images/word_mota.webp",
+    "correct_answer": "mota",
+    "audio_hint": "mota",
+    "question_text": "¿Qué es esto?",
+    "options": ["pelusa", "mota", "punto", "línea"],
+    "feedback_correct_text": "¡Sí! Es una 'mota'.",
+    "feedback_incorrect_text": "Eso es una 'mota'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "038",
+    "level": 2,
+    "category": "concepts",
+    "type": "word_recognition",
+    "image_asset": "/images/word_meta.webp",
+    "correct_answer": "meta",
+    "audio_hint": "meta",
+    "question_text": "¿Qué es la línea final en una carrera?",
+    "options": ["salida", "meta", "camino", "parada"],
+    "feedback_correct_text": "¡Exacto! Es la 'meta'.",
+    "feedback_incorrect_text": "Esa es la 'meta'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "039",
+    "level": 2,
+    "category": "culture",
+    "type": "word_recognition",
+    "image_asset": "/images/word_tumi.webp",
+    "correct_answer": "tumi",
+    "audio_hint": "tumi",
+    "question_text": "¿Qué objeto ceremonial es este (de Perú)?",
+    "options": ["vaso", "cuchillo", "tumi", "estatua"],
+    "feedback_correct_text": "¡Muy bien! Es un 'tumi'.",
+    "feedback_incorrect_text": "Eso es un 'tumi'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "040",
+    "level": 2,
+    "category": "actions",
+    "type": "word_recognition",
+    "image_asset": "/images/word_toma.webp",
+    "correct_answer": "toma",
+    "audio_hint": "toma",
+    "question_text": "¿Qué acción es 'recibir algo'?",
+    "options": ["dar", "correr", "saltar", "toma"],
+    "feedback_correct_text": "¡Correcto! Es 'toma'.",
+    "feedback_incorrect_text": "La acción es 'toma'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "041",
+    "level": 2,
+    "category": "relationships",
+    "type": "word_recognition",
+    "image_asset": "/images/word_ama.webp",
+    "correct_answer": "ama",
+    "audio_hint": "ama",
+    "question_text": "¿Qué acción es 'sentir amor'?",
+    "options": ["juega", "corre", "ama", "canta"],
+    "feedback_correct_text": "¡Excelente! Es 'ama'.",
+    "feedback_incorrect_text": "Es 'ama'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "042",
+    "level": 1,
+    "category": "syllables",
+    "type": "syllable_formation",
+    "image_asset": "/images/syllable_za.webp",
+    "correct_answer": "za",
+    "audio_hint": "za",
+    "question_text": "¿Qué dice 'z' con la 'a'?",
+    "options": ["za", "ce", "zi", "zo"],
+    "feedback_correct_text": "¡Perfecto! 'z' con 'a' dice 'za'.",
+    "feedback_incorrect_text": "Es 'za'.",
+    "points": 5,
+    "language": "es"
+  },
+    {
+    "id": "043",
+    "level": 2,
+    "category": "objects",
+    "type": "word_recognition",
+    "image_asset": "/images/word_tiza.webp",
+    "correct_answer": "tiza",
+    "audio_hint": "tiza",
+    "question_text": "¿Qué objeto se usa para escribir en la pizarra?",
+    "options": ["lápiz", "pluma", "tiza", "borrador"],
+    "feedback_correct_text": "¡Correcto! Es una 'tiza'.",
+    "feedback_incorrect_text": "Es una 'tiza'.",
+    "points": 10,
+    "language": "es"
+  },
+  {
+    "id": "044",
+    "level": 2,
+    "category": "clothing",
+    "type": "word_recognition",
+    "image_asset": "/images/word_zapato.webp",
+    "correct_answer": "zapato",
+    "audio_hint": "zapato",
+    "question_text": "¿Qué prenda se usa en el pie?",
+    "options": ["camisa", "pantalón", "zapato", "sombrero"],
+    "feedback_correct_text": "¡Muy bien! Es un 'zapato'.",
+    "feedback_incorrect_text": "Es un 'zapato'.",
     "points": 10,
     "language": "es"
   }
