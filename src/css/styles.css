@@ -131,7 +131,7 @@ body {
     text-align: center;
     padding: 15px 0;
     border-top: 5px solid #000;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-shadow: 2px 2px 0 #000;
 }
 
@@ -142,6 +142,10 @@ body {
 
 .coin, .mushroom, .star {
     margin: 0 10px;
+}
+
+.main-footer p {
+    font-size: 1rem;
 }
 
 /* RESPONSIVE DESIGN */
@@ -164,5 +168,9 @@ body {
     .main-footer {
         font-size: 1rem;
     }
+
+    .main-footer p {
+    font-size: 0.5rem;
+}
 }
 

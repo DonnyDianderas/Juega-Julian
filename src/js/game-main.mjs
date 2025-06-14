@@ -1,6 +1,6 @@
 /*This module orchestrates the main game loop, asset loading, and event handling. */
 
-import { canvas, ctx, feedback, marioImg, boxImg, coinImg, getMathJs, gameState} from './game-state.mjs';
+import { canvas, ctx, feedback, marioImg, boxImg, coinImg, getMathJs, gameState, initializeCanvasAndBoxDimensions } from './game-state.mjs';
 import { drawNumbers, drawMario, drawBox, drawCoin } from './game-drawing.mjs';
 import { createProblem, moveMario, checkAnswer } from './game-logic.mjs';
 import { initializeAudioContext, playBellSound } from './game-audio.mjs';
@@ -44,8 +44,8 @@ function setupEvents() {
 
         if (clickX >= gameState.box.x &&
             clickX <= gameState.box.x + gameState.box.width &&
-            clickY >= gameState.box.y + gameState.box.bounce &&
-            clickY <= gameState.box.y + gameState.box.height + gameState.box.bounce) {
+            clickY >= gameState.box.y &&
+            clickY <= gameState.box.y + gameState.box.height) {
 
             gameState.box.hit = true;
             playBellSound();
@@ -54,6 +54,8 @@ function setupEvents() {
                 gameState.box.hit = false;
                 createProblem();
             }, 400);
+        } else {
+            checkAnswer();
         }
     });
 
@@ -68,7 +70,7 @@ function setupEvents() {
     canvas.addEventListener('touchmove', (e) => {
         touchMoved = true;
         e.preventDefault();
-    }, { passive: false }); 
+    }, { passive: false });
 
     canvas.addEventListener('touchend', (e) => {
         const touchEndX = e.changedTouches[0].clientX;
@@ -86,7 +88,25 @@ function setupEvents() {
                 moveMario(-1);
             }
         } else if (!touchMoved) {
-            checkAnswer();
+            const rect = canvas.getBoundingClientRect();
+            const relativeTapX = touchEndX - rect.left;
+            const relativeTapY = touchEndY - rect.top;
+
+            if (relativeTapX >= gameState.box.x &&
+                relativeTapX <= gameState.box.x + gameState.box.width &&
+                relativeTapY >= gameState.box.y &&
+                relativeTapY <= gameState.box.y + gameState.box.height) {
+
+                gameState.box.hit = true;
+                playBellSound();
+
+                setTimeout(function () {
+                    gameState.box.hit = false;
+                    createProblem();
+                }, 400);
+            } else {
+                checkAnswer();
+            }
         }
         touchMoved = false;
         e.preventDefault();
@@ -96,10 +116,13 @@ function setupEvents() {
         initializeAudioContext();
 
         if (e.key === 'ArrowRight') {
+            e.preventDefault();
             moveMario(1);
         } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
             moveMario(-1);
         } else if (e.key === 'Enter') {
+            e.preventDefault();
             checkAnswer();
         }
     });
@@ -116,7 +139,7 @@ function gameLoop() {
 
 export function startGame() {
     if (getMathJs() === null) {
-        feedback.textContent = "Error: Math.js library not loaded. Please try again!";
+        feedback.textContent = "Error: The Math.js library failed to load.";
         feedback.className = 'feedback-box incorrect';
         return;
     }
@@ -124,27 +147,49 @@ export function startGame() {
     feedback.textContent = "Loading game...";
     feedback.className = 'feedback-box loading-message';
 
+    initializeCanvasAndBoxDimensions();
+
     loadImages().then(function() {
         setupEvents();
 
-        const totalSpace = canvas.width - 100;
-        const spaceBetweenNumbers = totalSpace / (gameState.numbers.length - 1);
+        const startXNumbers = 25;
+        const endXNumbers = canvas.width - 15;
+        const totalSpaceNumbers = endXNumbers - startXNumbers;
+        const spaceBetweenNumbers = totalSpaceNumbers / (gameState.numbers.length - 1);
+
+        // console.log(`DEBUG: startXNumbers: ${startXNumbers}`);
+        // console.log(`DEBUG: endXNumbers: ${endXNumbers}`);
+        // console.log(`DEBUG: totalSpaceNumbers: ${totalSpaceNumbers}`);
+        // console.log(`DEBUG: spaceBetweenNumbers: ${spaceBetweenNumbers}`);
+        // console.log(`DEBUG: Number of numbers: ${gameState.numbers.length}`);
+
 
         for (let i = 0; i < gameState.numbers.length; i++) {
             const number = gameState.numbers[i];
-            const position = 50 + (i * spaceBetweenNumbers);
+            const position = startXNumbers + (i * spaceBetweenNumbers);
             gameState.numberPositions[number] = position;
+            console.log(`DEBUG: Number ${number} position: ${position}`);
         }
 
-        gameState.marioX = gameState.numberPositions[gameState.currentNumber] - 15;
+        if (gameState.numbers.length > 0 && gameState.numberPositions[gameState.numbers[0]] !== undefined) {
+            gameState.currentNumber = gameState.numbers[0];
+            
+            gameState.marioX = gameState.numberPositions[gameState.currentNumber] - (gameState.marioDesiredWidth / 2);
+            // console.log(`DEBUG: Mario initial X calculated: ${gameState.marioX}`);
+            // console.log(`DEBUG: Mario Width used for calculation: ${gameState.marioDesiredWidth}`);
+        } else {
+            gameState.marioX = 50;
+            gameState.currentNumber = 0;
+            console.warn("Could not set initial MarioX based on number positions. Falling back to 50.");
+        }
 
-        feedback.textContent = "Click the ? box to start!";
+        feedback.textContent = "Click on the box with the '?' to start!";
         feedback.className = 'feedback-box default';
 
         gameLoop();
     }).catch(function(error) {
-        feedback.textContent = "Error loading game. Please try refreshing the page!";
+        feedback.textContent = "Error loading the game.";
         feedback.className = 'feedback-box incorrect';
-        console.error("Game start error:", error);
+        console.error("Error starting the game:", error);
     });
 }

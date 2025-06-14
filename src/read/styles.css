@@ -77,7 +77,7 @@ body {
     text-align: center;
     padding: 15px 0;
     border-top: 5px solid var(--mario-black);
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-shadow: 2px 2px 0 var(--mario-black);
     margin-top: auto;
 }
@@ -91,6 +91,9 @@ body {
     margin: 0 10px;
 }
 
+.main-footer p {
+    font-size: 1rem;
+}
 
 .main-read-game {
     background-color: var(--mario-green);
@@ -302,6 +305,10 @@ body {
     }
     .main-footer {
         font-size: 1rem;
+    }
+
+    .main-footer p {
+    font-size: 0.5rem;
     }
 
     .main-read-game h1 {
