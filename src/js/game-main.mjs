@@ -19,7 +19,7 @@ function loadImages() {
             };
             image.img.onerror = function() {
                 console.error('Error loading image:', image.src);
-                resolve(); 
+                resolve();
             };
             image.img.src = image.src;
         });
@@ -31,28 +31,68 @@ function loadImages() {
 }
 
 function setupEvents() {
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchMoved = false;
+
     canvas.addEventListener('click', (e) => {
+        initializeAudioContext();
+
         const rect = canvas.getBoundingClientRect();
         const clickX = e.clientX - rect.left;
         const clickY = e.clientY - rect.top;
 
         if (clickX >= gameState.box.x &&
             clickX <= gameState.box.x + gameState.box.width &&
-            clickY >= gameState.box.y + gameState.box.bounce && 
+            clickY >= gameState.box.y + gameState.box.bounce &&
             clickY <= gameState.box.y + gameState.box.height + gameState.box.bounce) {
 
             gameState.box.hit = true;
             playBellSound();
 
             setTimeout(function () {
-                gameState.box.hit = false;  
+                gameState.box.hit = false;
                 createProblem();
             }, 400);
         }
     });
 
-    document.addEventListener('keydown', function (e) {
+    canvas.addEventListener('touchstart', (e) => {
+        initializeAudioContext();
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchMoved = false;
+        e.preventDefault();
+    }, { passive: false });
 
+    canvas.addEventListener('touchmove', (e) => {
+        touchMoved = true;
+        e.preventDefault();
+    }, { passive: false }); 
+
+    canvas.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+
+        const minSwipeDistance = 50;
+        const maxVerticalDeviation = 50;
+
+        if (Math.abs(deltaX) > minSwipeDistance && Math.abs(deltaY) < maxVerticalDeviation) {
+            if (deltaX > 0) {
+                moveMario(1);
+            } else {
+                moveMario(-1);
+            }
+        } else if (!touchMoved) {
+            checkAnswer();
+        }
+        touchMoved = false;
+        e.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('keydown', function (e) {
         initializeAudioContext();
 
         if (e.key === 'ArrowRight') {
