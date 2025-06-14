@@ -1,0 +1,342 @@
+:root {
+    --mario-red: #e52521;
+    --mario-blue: #049cd8;
+    --mario-yellow: #fbd000;
+    --mario-green: #43b047;
+    --mario-brown: #8b4513;
+    --mario-white: #ffffff;
+    --mario-black: #000000;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: var(--mario-blue);
+    color: var(--mario-white);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.divider {
+    background-color: var(--mario-red);
+    color: var(--mario-white);
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 5px solid var(--mario-black);
+    position: relative;
+}
+
+.divider h1 {
+    margin: 10px 0;
+    font-size: 2.5rem;
+    text-shadow: 4px 4px 0 var(--mario-black);
+}
+
+.logo {
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    font-size: 1rem;
+    margin: 5px 0 20px;
+    color: var(--mario-yellow);
+    text-shadow: 2px 2px 0 var(--mario-black);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+}
+
+.menu li a {
+    color: var(--mario-white);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    background-color: var(--mario-black);
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.menu li a:hover {
+    transform: scale(1.1);
+    color: var(--mario-yellow);
+}
+
+.main-footer {
+    background-color: var(--mario-red);
+    color: var(--mario-white);
+    text-align: center;
+    padding: 15px 0;
+    border-top: 5px solid var(--mario-black);
+    font-size: 2rem;
+    text-shadow: 2px 2px 0 var(--mario-black);
+    margin-top: auto;
+}
+
+.footer-icons {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.coin, .mushroom, .star {
+    margin: 0 10px;
+}
+
+
+.main-read-game {
+    background-color: var(--mario-green);
+    color: var(--mario-white);
+    text-align: center;
+    padding: 20px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-read-game .game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-read-game h1 {
+    color: var(--mario-white);
+    font-size: 2rem;
+    text-shadow: 4px 4px 0 var(--mario-black);
+    text-align: center;
+    width: 100%;
+}
+
+.main-read-game .feedback-box {
+    font-size: 1.5rem;
+    padding: 15px;
+    background-color: var(--mario-yellow);
+    color: var(--mario-black);
+    border-radius: 0;
+    min-height: 40px;
+    width: 100%;
+    max-width: 600px;
+    border: 4px solid var(--mario-black);
+    box-shadow: 4px 4px 0 var(--mario-black);
+    line-height: 1.5;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-read-game .feedback-box.correct {
+    background-color: var(--mario-blue);
+    color: var(--mario-white);
+    border-color: var(--mario-black);
+}
+
+.main-read-game .feedback-box.incorrect {
+    background-color: var(--mario-red);
+    color: var(--mario-white);
+    border-color: var(--mario-black);
+}
+
+.main-read-game .question-area {
+    background-color: var(--mario-white);
+    border: 6px solid var(--mario-red);
+    border-radius: 8px;
+    box-shadow: 8px 8px 0 var(--mario-black);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.main-read-game .target-word {
+    font-size: 3rem;
+    color: var(--mario-black);
+    margin: 0;
+    text-shadow: 2px 2px 0 var(--mario-yellow);
+}
+
+.main-read-game .question-image {
+    max-width: 80%;
+    height: auto;
+    border: 4px solid var(--mario-brown);
+    border-radius: 5px;
+    box-shadow: 4px 4px 0 var(--mario-black);
+}
+
+.main-read-game .play-audio-button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--mario-blue);
+    color: var(--mario-white);
+    border: 4px solid var(--mario-black);
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--mario-black);
+    transition: all 0.1s;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.main-read-game .play-audio-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--mario-black);
+}
+
+.main-read-game .options-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.main-read-game .option-button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--mario-red);
+    color: var(--mario-white);
+    border: 4px solid var(--mario-black);
+    padding: 15px 25px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--mario-black);
+    transition: all 0.1s;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    min-width: 100px;
+    flex: 1 1 auto;
+    max-width: 48%;
+    box-sizing: border-box;
+}
+
+.main-read-game .option-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--mario-black);
+}
+
+.main-read-game .option-button.selected {
+    background-color: var(--mario-blue);
+}
+
+.main-read-game .game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.main-read-game .game-controls button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--mario-black);
+    color: var(--mario-white);
+    border: 4px solid var(--mario-red);
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--mario-black);
+    transition: all 0.1s;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    flex: 1 1 auto;
+    max-width: 48%;
+    box-sizing: border-box;
+}
+
+.main-read-game .game-controls button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--mario-black);
+}
+
+.main-read-game .game-instructions {
+    padding: 10px;
+    background-color: var(--mario-yellow);
+    border: 3px solid var(--mario-black);
+    box-shadow: 4px 4px 0 var(--mario-black);
+    color: var(--mario-black);
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 800px;
+    width: 100%;
+}
+
+.main-read-game .game-instructions p {
+    margin: 0;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .divider h1 {
+        font-size: 1.5rem;
+    }
+    .slogan { 
+        font-size: 0.8rem;
+    }
+    .main-footer {
+        font-size: 1rem;
+    }
+
+    .main-read-game h1 {
+        font-size: 1.5rem;
+    }
+    .main-read-game .feedback-box {
+        font-size: 1rem;
+        width: 95%;
+    }
+    .main-read-game .target-word {
+        font-size: 2rem;
+    }
+    .main-read-game .play-audio-button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+    .main-read-game .options-area {
+        gap: 10px;
+    }
+    .main-read-game .option-button {
+        font-size: 0.8rem;
+        padding: 10px 15px;
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .main-read-game .game-controls button {
+        font-size: 1rem;
+        padding: 8px 15px;
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .main-read-game .game-instructions {
+        font-size: 0.7rem;
+        padding: 8px;
+        width: 95%;
+    }
+}
+

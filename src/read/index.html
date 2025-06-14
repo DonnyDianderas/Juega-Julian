@@ -5,17 +5,39 @@
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juega Julián - Learn First, Level Up Faster!</title>
+    <title>Juega Julián - Learn to Read</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/read/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
     <script type="module" src="../js/read.js"></script>
 </head>
 
 <body>
     <header class="divider" id="main-header"></header>
-    <main>
-        
+    <main class="main-read-game">
+        <div class="game-container">
+            <h1>Learn to Read with Julian!</h1>
+            <div id="read-feedback" class="feedback-box default">Click START to begin!</div>
+            
+            <div id="question-area" class="question-area">
+                <!-- Word, image, audio hint will be displayed here by JS -->
+                <p id="target-word" class="target-word"></p>
+                <img id="question-image" src="" alt="Question image" class="question-image hidden">
+                <button id="play-audio-btn" class="play-audio-button hidden">Play Sound</button>
+            </div>
 
+            <div id="options-area" class="options-area">
+                <!-- Answer options (buttons) will be generated here by JS -->
+            </div>
+
+            <div class="game-controls">
+                <button id="start-read-game-btn">START GAME</button>
+            </div>
+
+            <div class="game-instructions">
+                <p>Listen to the word, then choose the correct part!</p>
+            </div>
+        </div>
     </main>
 
     <footer id="main-footer"></footer>
