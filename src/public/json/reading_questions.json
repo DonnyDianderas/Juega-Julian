@@ -115,7 +115,7 @@
     "question_text": "¿Qué dice 'm' con la 'i'?",
     "options": ["ma", "me", "mi", "mo"],
     "feedback_correct_text": "¡Genial! 'm' con 'i' dice 'mi'.",
-    "feedback_incorrect_text": "Sigue practicando. 'm' con 'i' dice 'mi'.",
+    "feedback_incorrect_text": " 'm' con 'i' dice 'mi'.",
     "points": 5,
     "language": "es"
   },
@@ -130,7 +130,7 @@
     "question_text": "¿Qué dice 'm' con la 'o'?",
     "options": ["me", "mi", "mo", "mu"],
     "feedback_correct_text": "¡Muy bien! 'm' con 'o' dice 'mo'.",
-    "feedback_incorrect_text": "No es 'mu', es 'mo'.",
+    "feedback_incorrect_text": " es 'mo'.",
     "points": 5,
     "language": "es"
   },
@@ -205,7 +205,7 @@
     "question_text": "¿Qué dice 'p' con la 'e'?",
     "options": ["pa", "pe", "po", "pu"],
     "feedback_correct_text": "¡Genial! 'p' con 'e' dice 'pe'.",
-    "feedback_incorrect_text": "No es 'pi', es 'pe'.",
+    "feedback_incorrect_text": "es 'pe'.",
     "points": 5,
     "language": "es"
   },
@@ -370,7 +370,7 @@
     "question_text": "¿Qué es esto?",
     "options": ["sopa", "taza", "mesa", "vaso"],
     "feedback_correct_text": "¡Rico! Es 'sopa'.",
-    "feedback_incorrect_text": "No es 'taza', es 'sopa'.",
+    "feedback_incorrect_text": "es 'sopa'.",
     "points": 10,
     "language": "es"
   },
