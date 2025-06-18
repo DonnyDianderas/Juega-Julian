@@ -25,3 +25,25 @@ export async function loadHeaderFooter() {
   }
 }
 
+////
+const SCORE_KEY = 'julian_total_score';
+
+export function getScore(gameType) {
+    const SCORE_KEY = `julian_score_${gameType}`; // Unique key for type of game
+    const score = localStorage.getItem(SCORE_KEY);
+    return score ? parseInt(score, 10) : 0;
+}
+
+export function incrementScore(gameType) {
+    let score = getScore(gameType);
+    score = score + 1;
+    const SCORE_KEY = `julian_score_${gameType}`;
+    localStorage.setItem(SCORE_KEY, score.toString());
+    return score;
+}
+
+export function resetScore(gameType) {
+    const SCORE_KEY = `julian_score_${gameType}`;
+    localStorage.setItem(SCORE_KEY, '0');
+    return 0;
+}

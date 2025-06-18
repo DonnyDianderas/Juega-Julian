@@ -292,6 +292,16 @@ body {
     display: none;
 }
 
+.score-display {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: var(--mario-yellow);
+    text-shadow: 2px 2px 0 var(--mario-black);
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
 @media (max-width: 600px) {
     .menu ul {
         flex-direction: column;
@@ -344,6 +354,9 @@ body {
         font-size: 0.7rem;
         padding: 8px;
         width: 95%;
+    }
+    .score-display {
+    font-size: 0.9rem;
     }
 }
 

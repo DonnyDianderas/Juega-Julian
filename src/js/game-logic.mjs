@@ -1,7 +1,8 @@
 /* This module contains the main game logic functions. */
 
-import { getMathJs, feedback, canvas, gameState } from './game-state.mjs'; 
+import { getMathJs, feedback, canvas, gameState, marioImg, coinImg  } from './game-state.mjs'; 
 import { playCorrectSound, playIncorrectSound, playCoinSound, playMoveSound } from './game-audio.mjs';
+import { incrementScore, getScore } from './utils.mjs'; // Added import for score functions
 
 export function getRandomNumber(min, max) {
     const math = getMathJs();
@@ -98,6 +99,15 @@ export function checkAnswer() {
         playCorrectSound();
         playCoinSound();
         showCoin();
+
+        // Increment score and update display for Math game
+        const newScore = incrementScore('math');
+        const scoreDisplay = document.getElementById('math-score-display');
+        if (scoreDisplay) {
+            scoreDisplay.textContent = `SCORE: ${newScore}`;
+        }
+        //
+
         gameState.targetNumber = null;
         gameState.box.isPulsing = true;
     } else {

@@ -1,6 +1,7 @@
 /* This module contains the main logic for the "Learn to Read" game.*/
 
 import { initializeAudioContext, playCorrectSound, playIncorrectSound, speakText } from './game-audio.mjs';
+import { incrementScore, getScore } from './utils.mjs'; // Added import for score functions
 
 const feedback = document.getElementById('read-feedback');
 const startBtn = document.getElementById('start-read-game-btn');
@@ -8,6 +9,7 @@ const targetWordEl = document.getElementById('target-word');
 const questionImageEl = document.getElementById('question-image');
 const playAudioBtn = document.getElementById('play-audio-btn');
 const optionsArea = document.getElementById('options-area');
+const scoreDisplay = document.getElementById('read-score-display'); // added to show score
 
 let questions = [];
 let currentQ = null;
@@ -23,6 +25,7 @@ async function getQuestions() {
         feedback.textContent = "Questions ready! Click START GAME.";
         feedback.className = 'feedback-box default';
         startBtn.disabled = false;
+        updateScoreDisplay(); // update the score to load questions
     } catch (error) {
         feedback.textContent = "Error loading questions.";
         feedback.className = 'feedback-box incorrect';
@@ -77,6 +80,14 @@ function checkAnswer(selectedOption) {
         feedback.textContent = currentQ.feedback_correct_text || "Correct!";
         feedback.className = 'feedback-box correct';
         playCorrectSound();
+
+        // Increment the score
+        const newScore = incrementScore('read');
+        if (scoreDisplay) { 
+            scoreDisplay.textContent = `SCORE: ${newScore}`;
+        }
+        //
+
         setTimeout(showRandomQuestion, 1500);
     } else {
         feedback.textContent = currentQ.feedback_incorrect_text || "Incorrect. Try again!";
@@ -105,6 +116,14 @@ export function startReadingGame() {
     startBtn.addEventListener('click', showRandomQuestion);
 }
 
+//
+function updateScoreDisplay() {
+    // Function to show the score to load
+    if (scoreDisplay) {
+        scoreDisplay.textContent = `SCORE: ${getScore('read')}`;
+    }
+}
+//
 getQuestions();
 
 startBtn.addEventListener('click', startReadingGame);
