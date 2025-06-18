@@ -1,6 +1,6 @@
 /* This module contains the main game logic functions. */
 
-import { getMathJs, feedback, canvas, gameState, marioImg, coinImg  } from './game-state.mjs'; 
+import { getMathJs, feedback, canvas, gameState } from './game-state.mjs'; 
 import { playCorrectSound, playIncorrectSound, playCoinSound, playMoveSound } from './game-audio.mjs';
 import { incrementScore, getScore } from './utils.mjs'; // Added import for score functions
 
